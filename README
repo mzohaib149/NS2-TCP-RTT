@@ -1,0 +1,29 @@
+To run the script
+
+ns [VEGAS|SACK] [1|2|3]
+
+It creates output_[VEGAS|SACK]_[1|2|3] depending on one of the six combinations for which it is run
+
+The format of these output files is:
+
+"Time for calculation: [expr $time] sec"
+"Now: [expr $now]"
+"Number of bytes received at sink1: [expr $diff1]"
+"Number of bytes received at sink2: [expr $diff2]"
+"Throughput at sink1: [expr $bw1] bps"
+"Throughput at sink2: [expr $bw2] bps"	
+"Ratio: [expr $ratio]"
+
+It also displays at console: 
+
+"Throughput at sink1: [expr $bw1] bps"
+"Throughput at sink2: [expr $bw2] bps"	
+"Ratio: [expr $ratio]"
+
+
+It also creates two output files sink1.tr and sink2.tr
+
+These files record time and bandwidth at sink1 and sink2 starting for t=100 to 400sec in intervals of 10 sec.
+This file is then used as input for Xgraph to plot time vs. throughput for both sinks in a graph. 
+
+
